@@ -124,13 +124,17 @@ body {
 /* ── NAME + BIO ── */
 .name {
   font-family: 'Syne', sans-serif;
-  font-size: clamp(28px, 8vw, 38px);
+  font-size: clamp(22px, 7vw, 38px);   /* Reduced minimum size and fluid scaling */
   font-weight: 800;
-  letter-spacing: -1px;
+  letter-spacing: normal;              /* Changed from -1px to prevent character crowding */
   text-align: center;
-  line-height: 1;
+  line-height: 1.2;                    /* Increased from 1 to handle multi-line wrapping safely */
+  margin-top: 16px;                    /* Adds breathing room below the avatar photo */
   margin-bottom: 12px;
+  word-break: break-word;              /* Forces long links/words to wrap instead of overflowing */
+  padding: 0 16px;                     /* Prevents letters from touching the screen edges */
 }
+
 .name mark {
   background: none;
   color: var(--accent);
