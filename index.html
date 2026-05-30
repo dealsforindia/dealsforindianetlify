@@ -125,16 +125,16 @@ body {
 .name {
   font-family: 'Syne', sans-serif;
   font-size: clamp(16px, 6.5vw, 38px);
-   /* Reduced minimum size and fluid scaling */
   font-weight: 800;
-  letter-spacing: normal;              /* Changed from -1px to prevent character crowding */
+  letter-spacing: normal;
   text-align: center;
-  line-height: 1.2;                    /* Increased from 1 to handle multi-line wrapping safely */
-  margin-top: 16px;                    /* Adds breathing room below the avatar photo */
+  line-height: 1.2;
+  margin-top: 16px;
   margin-bottom: 12px;
-  word-break: break-word;              /* Forces long links/words to wrap instead of overflowing */
-  padding: 0 16px;                     /* Prevents letters from touching the screen edges */
+  word-break: keep-all;               /* <-- CHANGE THIS LINE HERE */
+  padding: 0 16px;
 }
+
 
 .name mark {
   background: none;
